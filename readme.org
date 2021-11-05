@@ -1,0 +1,10 @@
+* Nishant Notification eNabler (NNN)
+** Quickstart
+   #+begin_src shell
+     pod install
+     xcodebuild -workspace NNN.xcworkspace -scheme "NNN (iOS)" build
+     echo "Grab app path from above and run"
+     echo "ios-deploy --debug --bundle <PATH>"
+   #+end_src
+** TODO Add pre-commit hook
+   https://github.com/swiftwasm/carton/blob/main/.pre-commit-config.yaml
