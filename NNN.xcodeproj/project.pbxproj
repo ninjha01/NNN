@@ -18,6 +18,7 @@
 		566239102735E3F000FBC7BC /* NNNApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 566238E82735E3EF00FBC7BC /* NNNApp.swift */; };
 		566239122735E3F000FBC7BC /* NotificationSourceMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 566238E92735E3EF00FBC7BC /* NotificationSourceMenuView.swift */; };
 		566239142735E3F000FBC7BC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 566238EA2735E3EF00FBC7BC /* Assets.xcassets */; };
+		5686ED9127381A6500748DFB /* NotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5686ED9027381A6500748DFB /* NotificationManager.swift */; };
 		56FDF7D62735F09000F4DE4C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 56FDF7D52735F09000F4DE4C /* GoogleService-Info.plist */; };
 		6BCB9167193F71BCA3A3A8D8 /* Pods_NNN__iOS_.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D867945B4A8A4EE6F37BF175 /* Pods_NNN__iOS_.framework */; };
 /* End PBXBuildFile section */
@@ -49,6 +50,7 @@
 		566239082735E3F000FBC7BC /* Tests macOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tests macOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5662390C2735E3F000FBC7BC /* Tests_macOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_macOS.swift; sourceTree = "<group>"; };
 		5662390E2735E3F000FBC7BC /* Tests_macOSLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_macOSLaunchTests.swift; sourceTree = "<group>"; };
+		5686ED9027381A6500748DFB /* NotificationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationManager.swift; sourceTree = "<group>"; };
 		56FDF7D42735EA8100F4DE4C /* NNN--iOS--Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "NNN--iOS--Info.plist"; sourceTree = "<group>"; };
 		56FDF7D52735F09000F4DE4C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		56FDF7D72736038900F4DE4C /* NNN (iOS).entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "NNN (iOS).entitlements"; sourceTree = "<group>"; };
@@ -100,6 +102,7 @@
 		566238E72735E3EF00FBC7BC /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				5686ED9027381A6500748DFB /* NotificationManager.swift */,
 				5608B3032737FBC700061B23 /* FirestoreManager.swift */,
 				566238E82735E3EF00FBC7BC /* NNNApp.swift */,
 				5617D35B2736046500C9C9AD /* AppDelegate.swift */,
@@ -342,6 +345,7 @@
 				5608B3042737FBC700061B23 /* FirestoreManager.swift in Sources */,
 				5617D366273745D100C9C9AD /* FirebaseModels.swift in Sources */,
 				566239122735E3F000FBC7BC /* NotificationSourceMenuView.swift in Sources */,
+				5686ED9127381A6500748DFB /* NotificationManager.swift in Sources */,
 				5608B3022737FAA300061B23 /* FirebaseLoginView.swift in Sources */,
 				566239102735E3F000FBC7BC /* NNNApp.swift in Sources */,
 			);

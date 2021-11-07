@@ -8,6 +8,18 @@
 import SwiftUI
 //import Firestore
 
+private func subscribeToTopics(sources: [NotificationSource]) {
+    let messagingManager = MessagingManager()
+    for source in sources {
+        for topic in source.topics {
+            if topic.subscribed {
+                messagingManager.subscribeTo(app: source.name, topic: topic.name)
+            }
+        }
+    }
+}
+
+
 private class NotificationSourceViewModel: ObservableObject {
     @Published var notificationSources = [NotificationSource]()
     @Published var fetching = false
@@ -19,10 +31,13 @@ private class NotificationSourceViewModel: ObservableObject {
             saveFunc: ({( sources: [NotificationSource]) -> () in
                 debugPrint("[NNN]", "Model recieved \(sources)")
                 self.notificationSources = sources
+                subscribeToTopics(sources: sources)
                 self.fetching = false
             }))
     }
+    
 }
+
 
 struct NotificationSourceListView: View {
     @StateObject fileprivate var model = NotificationSourceViewModel()

@@ -14,7 +14,6 @@ private let store = Firestore.firestore()
 
 class NotificationSourceRepository: ObservableObject {
     private let ref = store.collection("NotificationSources")
-    
     func pull(saveFunc: @escaping (_ sources: [NotificationSource]) -> ()) async -> () {
         var sourceList: [NotificationSource] = [NotificationSource]()
         
@@ -42,8 +41,4 @@ class NotificationSourceRepository: ObservableObject {
             }
         }
     }
-    
-    func push(update: NotificationSource, callback: @escaping () - ()) async -> {
-        
-
-    }
+}
