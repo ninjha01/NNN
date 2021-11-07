@@ -11,7 +11,7 @@ target 'NNN (iOS)' do
   pod 'Firebase', '7.2-M1'
   pod 'Firebase/Auth'
   pod 'Firebase/Messaging'
-
+  pod 'Firebase/Firestore'
   # Dev Dependencies
   pod 'SwiftLint'
 

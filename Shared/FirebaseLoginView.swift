@@ -9,12 +9,15 @@ import SwiftUI
 import Firebase
 
 struct FirebaseLoginView: View {
+    @Binding var currentUserId: String?
+    
     @State var email = ""
     @State var password = ""
 
     var body: some View {
         VStack {
-            TextField("Email", text: $email)
+            TextField("Email", text: $email).keyboardType(.emailAddress)
+                .autocapitalization(.none)
             SecureField("Password", text: $password)
             Button(action: { login() }) {
                 Text("Sign in")
@@ -29,6 +32,9 @@ struct FirebaseLoginView: View {
                 print(error?.localizedDescription ?? "")
             } else {
                 print("success")
+                if (result?.user.uid != nil) {
+                    currentUserId = result!.user.uid
+                }
             }
         }
     }

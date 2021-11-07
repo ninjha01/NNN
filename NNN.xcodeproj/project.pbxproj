@@ -7,8 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5608B3022737FAA300061B23 /* FirebaseLoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5608B3012737FAA300061B23 /* FirebaseLoginView.swift */; };
+		5608B3042737FBC700061B23 /* FirestoreManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5608B3032737FBC700061B23 /* FirestoreManager.swift */; };
 		5617D35C2736046500C9C9AD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5617D35B2736046500C9C9AD /* AppDelegate.swift */; };
-		5617D360273618D200C9C9AD /* AuthenticationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5617D35F273618D200C9C9AD /* AuthenticationViewModel.swift */; };
+		5617D366273745D100C9C9AD /* FirebaseModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5617D365273745D100C9C9AD /* FirebaseModels.swift */; };
 		566239012735E3EF00FBC7BC /* Tests_iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 566239002735E3EF00FBC7BC /* Tests_iOS.swift */; };
 		566239032735E3EF00FBC7BC /* Tests_iOSLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 566239022735E3EF00FBC7BC /* Tests_iOSLaunchTests.swift */; };
 		5662390D2735E3F000FBC7BC /* Tests_macOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5662390C2735E3F000FBC7BC /* Tests_macOS.swift */; };
@@ -32,8 +34,10 @@
 
 /* Begin PBXFileReference section */
 		4B8F399A924684D358EB4B30 /* Pods-NNN (iOS).release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NNN (iOS).release.xcconfig"; path = "Target Support Files/Pods-NNN (iOS)/Pods-NNN (iOS).release.xcconfig"; sourceTree = "<group>"; };
+		5608B3012737FAA300061B23 /* FirebaseLoginView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirebaseLoginView.swift; sourceTree = "<group>"; };
+		5608B3032737FBC700061B23 /* FirestoreManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirestoreManager.swift; sourceTree = "<group>"; };
 		5617D35B2736046500C9C9AD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		5617D35F273618D200C9C9AD /* AuthenticationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationViewModel.swift; sourceTree = "<group>"; };
+		5617D365273745D100C9C9AD /* FirebaseModels.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirebaseModels.swift; sourceTree = "<group>"; };
 		566238E82735E3EF00FBC7BC /* NNNApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NNNApp.swift; sourceTree = "<group>"; };
 		566238E92735E3EF00FBC7BC /* NotificationSourceMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationSourceMenuView.swift; sourceTree = "<group>"; };
 		566238EA2735E3EF00FBC7BC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -96,9 +100,11 @@
 		566238E72735E3EF00FBC7BC /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				5608B3032737FBC700061B23 /* FirestoreManager.swift */,
 				566238E82735E3EF00FBC7BC /* NNNApp.swift */,
-				5617D35F273618D200C9C9AD /* AuthenticationViewModel.swift */,
 				5617D35B2736046500C9C9AD /* AppDelegate.swift */,
+				5617D365273745D100C9C9AD /* FirebaseModels.swift */,
+				5608B3012737FAA300061B23 /* FirebaseLoginView.swift */,
 				566238E92735E3EF00FBC7BC /* NotificationSourceMenuView.swift */,
 				56FDF7D52735F09000F4DE4C /* GoogleService-Info.plist */,
 				566238EA2735E3EF00FBC7BC /* Assets.xcassets */,
@@ -333,9 +339,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				5617D35C2736046500C9C9AD /* AppDelegate.swift in Sources */,
+				5608B3042737FBC700061B23 /* FirestoreManager.swift in Sources */,
+				5617D366273745D100C9C9AD /* FirebaseModels.swift in Sources */,
 				566239122735E3F000FBC7BC /* NotificationSourceMenuView.swift in Sources */,
+				5608B3022737FAA300061B23 /* FirebaseLoginView.swift in Sources */,
 				566239102735E3F000FBC7BC /* NNNApp.swift in Sources */,
-				5617D360273618D200C9C9AD /* AuthenticationViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

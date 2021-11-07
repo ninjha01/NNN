@@ -6,31 +6,81 @@
 //
 
 import SwiftUI
+//import Firestore
 
-struct NotificationSource {
-    var name:  String
-    var topics: Array<String>
-    init(name: String, topics: Array<String>) {
-        self.name = name
-        self.topics = topics
+private class NotificationSourceViewModel: ObservableObject {
+    @Published var notificationSources = [NotificationSource]()
+    @Published var fetching = false
+    
+    @MainActor
+    func fetchData() async {
+        fetching = true
+        await NotificationSourceRepository().pull(
+            saveFunc: ({( sources: [NotificationSource]) -> () in
+                debugPrint("[NNN]", "Model recieved \(sources)")
+                self.notificationSources = sources
+                self.fetching = false
+            }))
     }
 }
 
-struct NotificationSourceMenuView: View {
+struct NotificationSourceListView: View {
+    @StateObject fileprivate var model = NotificationSourceViewModel()
+    
     var body: some View {
         NavigationView{
             List {
-                Text("Melon")
-                Text("Abacus")
+                ForEach($model.notificationSources) { $source in
+                    NotificationSourceView(source: $source)
+                }
             }
-            .navigationTitle("Apps")
+            .navigationTitle("Notification Sources")
+            .overlay {
+                if (model.fetching) {
+                    ProgressView("Fetching notifcation sources...")
+                        .progressViewStyle(CircularProgressViewStyle())
+                }
+            } .animation(.default, value: model.notificationSources)
+                .task {
+                    await model.fetchData()
+                    
+                }
+        }
+    }
+}
+struct NotificationSourceView: View {
+    @Binding var source: NotificationSource
+    var body: some View {
+        Section(header: Text(source.name)) {
+            ForEach(source.topics) { topic in
+                TopicToggler(name: topic.name,
+                             toggledOn: topic.subscribed,
+                             onChange: {() -> () in
+                    debugPrint("[NNN]", "called onChange for topic \(topic.name)")})
+            }
         }
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        NotificationSourceMenuView()
-            .previewDevice(PreviewDevice(rawValue: "iPhone 12 Pro Max"))
+struct TopicToggler: View {
+    private var name: String
+    @State private var toggledOn: Bool
+    private var onChange: () -> ()
+    
+    init(name: String, toggledOn: Bool, onChange: @escaping () -> ()) {
+        self.name = name
+        self.toggledOn = toggledOn
+        self.onChange = onChange
+    }
+    
+    var body: some View {
+        Toggle(isOn: $toggledOn) {
+            Text(name)
+        }
+        .onChange(of: toggledOn)
+        { value in
+            //perform your action here...
+            self.onChange()
+        }
     }
 }
