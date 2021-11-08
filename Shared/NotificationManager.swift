@@ -11,9 +11,12 @@ import Firebase
 class MessagingManager: ObservableObject {
     private let messaging = Messaging.messaging()
     
-    func subscribeTo(app: String, topic: String) -> () {
-        let topicName = "\(app)-\(topic)"
-        self.messaging.subscribe(toTopic: topicName)
-        debugPrint("[NNN]", "Successfully subscribed to app \(app)'s topic \(topic)")
+    func subscribeTo(source: NotificationSource) -> () {
+        self.messaging.subscribe(toTopic: source.id)
+        debugPrint("[NNN]", "Successfully subscribed to \(source.id)")
+    }
+    func unsubscribeFrom(source: NotificationSource) -> () {
+        self.messaging.unsubscribe(fromTopic: source.id)
+        debugPrint("[NNN]", "Successfully unsubscribed from \(source.id)")
     }
 }

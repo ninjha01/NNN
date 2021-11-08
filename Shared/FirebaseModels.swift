@@ -20,14 +20,22 @@ class User: ObservableObject {
 }
 
 
-struct NotificationSource: Identifiable, Decodable, Equatable {
-    var id: String
-    var name:  String
-    var topics: [Topic]
-}
+class NotificationSource: Equatable, Identifiable {
+    static func == (lhs: NotificationSource, rhs: NotificationSource) -> Bool {
+        return lhs.id == rhs.id
 
-struct Topic: Identifiable, Hashable, Decodable {
+    }
+    
     var id: String
-    var name: String
-    var subscribed: Bool
+    var display_name:  String
+    var subscribers: [String]
+    
+    init(id: String, display_name: String, subscribers: [String]) {
+        self.id = id
+        self.display_name = display_name
+        self.subscribers = subscribers
+    }
+    func amISubscribed() -> Bool {
+        return self.subscribers.contains(getCurrentUserID() ?? "unknown")
+    }
 }

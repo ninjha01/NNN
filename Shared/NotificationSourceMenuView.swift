@@ -11,23 +11,40 @@ import SwiftUI
 private func subscribeToTopics(sources: [NotificationSource]) {
     let messagingManager = MessagingManager()
     for source in sources {
-        for topic in source.topics {
-            if topic.subscribed {
-                messagingManager.subscribeTo(app: source.name, topic: topic.name)
-            }
+        if source.amISubscribed() {
+            messagingManager.subscribeTo(source: source)
         }
     }
+}
+
+func handleSubscribeToTopic(source: NotificationSource) async {
+    let messagingManager = MessagingManager()
+    let dataRepo = NotificationSourceRepository()
+    messagingManager.subscribeTo(source: source)
+    dataRepo.subscribeTo(
+        source: source
+    )
+}
+
+func handleUnsubscribeToTopic(source: NotificationSource) async {
+    let messagingManager = MessagingManager()
+    let dataRepo = NotificationSourceRepository()
+    messagingManager.unsubscribeFrom(source: source)
+    dataRepo.unsubscribeFrom(
+        source: source
+    )
 }
 
 
 private class NotificationSourceViewModel: ObservableObject {
     @Published var notificationSources = [NotificationSource]()
     @Published var fetching = false
+    var sourceRepo = NotificationSourceRepository()
     
     @MainActor
-    func fetchData() async {
+    func fetchData() {
         fetching = true
-        await NotificationSourceRepository().pull(
+        sourceRepo.pull(
             saveFunc: ({( sources: [NotificationSource]) -> () in
                 debugPrint("[NNN]", "Model recieved \(sources)")
                 self.notificationSources = sources
@@ -45,8 +62,16 @@ struct NotificationSourceListView: View {
     var body: some View {
         NavigationView{
             List {
-                ForEach($model.notificationSources) { $source in
-                    NotificationSourceView(source: $source)
+                ForEach(model.notificationSources) { source in
+                    SourceToggler(display_name: source.display_name,
+                                  toggledOn: source.amISubscribed(),
+                                  onChange: {(_ toggledOn: Bool) async -> () in
+                        if (toggledOn) {
+                            await handleSubscribeToTopic(source: source)}
+                        else {
+                            await handleUnsubscribeToTopic(source: source)
+                        }
+                    })
                 }
             }
             .navigationTitle("Notification Sources")
@@ -57,45 +82,33 @@ struct NotificationSourceListView: View {
                 }
             } .animation(.default, value: model.notificationSources)
                 .task {
-                    await model.fetchData()
+                    model.fetchData()
                     
                 }
         }
     }
 }
-struct NotificationSourceView: View {
-    @Binding var source: NotificationSource
-    var body: some View {
-        Section(header: Text(source.name)) {
-            ForEach(source.topics) { topic in
-                TopicToggler(name: topic.name,
-                             toggledOn: topic.subscribed,
-                             onChange: {() -> () in
-                    debugPrint("[NNN]", "called onChange for topic \(topic.name)")})
-            }
-        }
-    }
-}
 
-struct TopicToggler: View {
-    private var name: String
+struct SourceToggler: View {
+    private var display_name: String
     @State private var toggledOn: Bool
-    private var onChange: () -> ()
+    private var onChange: (_ toggledOn: Bool) async -> ()
     
-    init(name: String, toggledOn: Bool, onChange: @escaping () -> ()) {
-        self.name = name
+    init(display_name: String, toggledOn: Bool, onChange: @escaping (Bool) async -> ()) {
+        self.display_name = display_name
         self.toggledOn = toggledOn
         self.onChange = onChange
     }
     
     var body: some View {
         Toggle(isOn: $toggledOn) {
-            Text(name)
+            Text(display_name)
         }
         .onChange(of: toggledOn)
         { value in
-            //perform your action here...
-            self.onChange()
+            toggledOn.toggle()
+        }.task(id: toggledOn) {
+            await onChange(toggledOn)
         }
     }
 }

@@ -11,14 +11,15 @@ import FirebaseAuth
 
 private let store = Firestore.firestore()
 
+func getCurrentUserID() -> String? {
+    return Auth.auth().currentUser?.uid
+}
 
 class NotificationSourceRepository: ObservableObject {
-    private let ref = store.collection("NotificationSources")
-    func pull(saveFunc: @escaping (_ sources: [NotificationSource]) -> ()) async -> () {
+    private let ref = store.collection("topics")
+    func pull(saveFunc: @escaping (_ sources: [NotificationSource]) -> ()) -> () {
         var sourceList: [NotificationSource] = [NotificationSource]()
-        
-        let uid = Auth.auth().currentUser!.uid
-        await ref.getDocuments() { (snapshot, err) in
+        ref.getDocuments() { (snapshot, err) in
             if let err = err {
                 debugPrint("[NNN]", "Error getting documents: \(err)")
                 sourceList = []
@@ -26,18 +27,41 @@ class NotificationSourceRepository: ObservableObject {
                 debugPrint("[NNN]", "Success! : \(snapshot!.documents)")
                 for document in snapshot!.documents {
                     let data = document.data()
-                    var topics = [Topic]()
-                    for topicDatum in data["topics"] as! [[String: Any]] {
-                        let name = topicDatum["name"] as! String
-                        debugPrint("[NNN] topicDatum", topicDatum)
-                        let subscribers = topicDatum["subscribers"] as! [String]
-                        topics.append(Topic(id: name, name: name, subscribed: subscribers.contains(uid ?? "no user")))
-                    }
                     sourceList.append(
-                        NotificationSource(id: document.documentID, name: data["name"] as! String, topics: topics)
+                        NotificationSource(
+                            id: document.documentID,
+                            display_name: data["display_name"] as! String,
+                            subscribers: data["subscribers"] as! [String])
                     )
                 }
                 saveFunc(sourceList)
+            }
+        }
+    }
+    
+    func subscribeTo(
+        source: NotificationSource
+    ){
+        let uid = getCurrentUserID()
+        let docRef = ref.document(source.id)
+        docRef.updateData(["subscribers": FieldValue.arrayUnion([uid])]) {err in
+            if (err != nil) {
+                debugPrint("[NNN] Failed to push subscription \(err)")
+            } else {
+            debugPrint("[NNN] Update Succeeded")
+            }
+        }
+    }
+    func unsubscribeFrom(
+        source: NotificationSource
+    ) {
+        let uid = getCurrentUserID()
+        let docRef = ref.document(source.id)
+        docRef.updateData(["subscribers": FieldValue.arrayRemove([uid])]) {err in
+            if (err != nil) {
+                debugPrint("[NNN] Failed to remove subscription \(err)")
+            } else {
+            debugPrint("[NNN] Update Succeeded")
             }
         }
     }

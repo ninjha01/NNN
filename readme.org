@@ -6,5 +6,18 @@
      echo "Grab app path from above and run"
      echo "ios-deploy --debug --bundle <PATH>"
    #+end_src
+** Data Model
+   #+begin_src json
+     {
+	 "topics": {
+	     "abacus-general": {
+		 "display_name": "[Abacus] General",
+		 "subscribers": ["userId0", "userID1"]
+	     }
+	 }
+     }
+     
+   #+end_src
 ** TODO Add pre-commit hook
    https://github.com/swiftwasm/carton/blob/main/.pre-commit-config.yaml
+** TODO Need to set up function/server to recieve notification requests and route to NNS
