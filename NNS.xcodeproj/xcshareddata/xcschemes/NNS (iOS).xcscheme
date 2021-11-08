@@ -57,9 +57,18 @@
             BlueprintIdentifier = "566238EE2735E3EF00FBC7BC"
             BuildableName = "NNN.app"
             BlueprintName = "NNN (iOS)"
-            ReferencedContainer = "container:NNN.xcodeproj">
+            ReferencedContainer = "container:NNS.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "566238EE2735E3EF00FBC7BC"
+            BuildableName = "NNN.app"
+            BlueprintName = "NNN (iOS)"
+            ReferencedContainer = "container:NNN.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
    </LaunchAction>
    <ProfileAction
       buildConfiguration = "Release"

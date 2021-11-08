@@ -15,7 +15,7 @@
 		566239032735E3EF00FBC7BC /* Tests_iOSLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 566239022735E3EF00FBC7BC /* Tests_iOSLaunchTests.swift */; };
 		5662390D2735E3F000FBC7BC /* Tests_macOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5662390C2735E3F000FBC7BC /* Tests_macOS.swift */; };
 		5662390F2735E3F000FBC7BC /* Tests_macOSLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5662390E2735E3F000FBC7BC /* Tests_macOSLaunchTests.swift */; };
-		566239102735E3F000FBC7BC /* NNNApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 566238E82735E3EF00FBC7BC /* NNNApp.swift */; };
+		566239102735E3F000FBC7BC /* NNSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 566238E82735E3EF00FBC7BC /* NNSApp.swift */; };
 		566239122735E3F000FBC7BC /* NotificationSourceMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 566238E92735E3EF00FBC7BC /* NotificationSourceMenuView.swift */; };
 		566239142735E3F000FBC7BC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 566238EA2735E3EF00FBC7BC /* Assets.xcassets */; };
 		5686ED9127381A6500748DFB /* NotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5686ED9027381A6500748DFB /* NotificationManager.swift */; };
@@ -39,7 +39,7 @@
 		5608B3032737FBC700061B23 /* FirestoreManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirestoreManager.swift; sourceTree = "<group>"; };
 		5617D35B2736046500C9C9AD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5617D365273745D100C9C9AD /* FirebaseModels.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirebaseModels.swift; sourceTree = "<group>"; };
-		566238E82735E3EF00FBC7BC /* NNNApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NNNApp.swift; sourceTree = "<group>"; };
+		566238E82735E3EF00FBC7BC /* NNSApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NNSApp.swift; sourceTree = "<group>"; };
 		566238E92735E3EF00FBC7BC /* NotificationSourceMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationSourceMenuView.swift; sourceTree = "<group>"; };
 		566238EA2735E3EF00FBC7BC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		566238EF2735E3EF00FBC7BC /* NNN.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NNN.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -51,9 +51,9 @@
 		5662390C2735E3F000FBC7BC /* Tests_macOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_macOS.swift; sourceTree = "<group>"; };
 		5662390E2735E3F000FBC7BC /* Tests_macOSLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_macOSLaunchTests.swift; sourceTree = "<group>"; };
 		5686ED9027381A6500748DFB /* NotificationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationManager.swift; sourceTree = "<group>"; };
-		56FDF7D42735EA8100F4DE4C /* NNN--iOS--Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "NNN--iOS--Info.plist"; sourceTree = "<group>"; };
+		56FDF7D42735EA8100F4DE4C /* NNS--iOS--Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "NNS--iOS--Info.plist"; sourceTree = "<group>"; };
 		56FDF7D52735F09000F4DE4C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		56FDF7D72736038900F4DE4C /* NNN (iOS).entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "NNN (iOS).entitlements"; sourceTree = "<group>"; };
+		56FDF7D72736038900F4DE4C /* NNS (iOS).entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "NNS (iOS).entitlements"; sourceTree = "<group>"; };
 		D867945B4A8A4EE6F37BF175 /* Pods_NNN__iOS_.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NNN__iOS_.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC9FC4BF7290449A264B66A4 /* Pods-NNN (iOS).debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NNN (iOS).debug.xcconfig"; path = "Target Support Files/Pods-NNN (iOS)/Pods-NNN (iOS).debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -87,8 +87,8 @@
 		566238E22735E3EE00FBC7BC = {
 			isa = PBXGroup;
 			children = (
-				56FDF7D72736038900F4DE4C /* NNN (iOS).entitlements */,
-				56FDF7D42735EA8100F4DE4C /* NNN--iOS--Info.plist */,
+				56FDF7D72736038900F4DE4C /* NNS (iOS).entitlements */,
+				56FDF7D42735EA8100F4DE4C /* NNS--iOS--Info.plist */,
 				566238E72735E3EF00FBC7BC /* Shared */,
 				566238F62735E3EF00FBC7BC /* macOS */,
 				566238FF2735E3EF00FBC7BC /* Tests iOS */,
@@ -104,7 +104,7 @@
 			children = (
 				5686ED9027381A6500748DFB /* NotificationManager.swift */,
 				5608B3032737FBC700061B23 /* FirestoreManager.swift */,
-				566238E82735E3EF00FBC7BC /* NNNApp.swift */,
+				566238E82735E3EF00FBC7BC /* NNSApp.swift */,
 				5617D35B2736046500C9C9AD /* AppDelegate.swift */,
 				5617D365273745D100C9C9AD /* FirebaseModels.swift */,
 				5608B3012737FAA300061B23 /* FirebaseLoginView.swift */,
@@ -248,7 +248,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 566238E62735E3EE00FBC7BC /* Build configuration list for PBXProject "NNN" */;
+			buildConfigurationList = 566238E62735E3EE00FBC7BC /* Build configuration list for PBXProject "NNS" */;
 			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -347,7 +347,7 @@
 				566239122735E3F000FBC7BC /* NotificationSourceMenuView.swift in Sources */,
 				5686ED9127381A6500748DFB /* NotificationManager.swift in Sources */,
 				5608B3022737FAA300061B23 /* FirebaseLoginView.swift in Sources */,
-				566239102735E3F000FBC7BC /* NNNApp.swift in Sources */,
+				566239102735E3F000FBC7BC /* NNSApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -497,13 +497,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = "NNN (iOS).entitlements";
+				CODE_SIGN_ENTITLEMENTS = "NNS (iOS).entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = H4V63CJ3CM;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "NNN--iOS--Info.plist";
+				INFOPLIST_FILE = "NNS--iOS--Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = NNS;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -515,7 +516,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.nishant.nnn;
+				PRODUCT_BUNDLE_IDENTIFIER = com.nishant.nns;
 				PRODUCT_NAME = NNN;
 				SDKROOT = iphoneos;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -530,13 +531,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = "NNN (iOS).entitlements";
+				CODE_SIGN_ENTITLEMENTS = "NNS (iOS).entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = H4V63CJ3CM;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "NNN--iOS--Info.plist";
+				INFOPLIST_FILE = "NNS--iOS--Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = NNS;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -548,7 +550,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.nishant.nnn;
+				PRODUCT_BUNDLE_IDENTIFIER = com.nishant.nns;
 				PRODUCT_NAME = NNN;
 				SDKROOT = iphoneos;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -662,7 +664,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		566238E62735E3EE00FBC7BC /* Build configuration list for PBXProject "NNN" */ = {
+		566238E62735E3EE00FBC7BC /* Build configuration list for PBXProject "NNS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				566239162735E3F000FBC7BC /* Debug */,
