@@ -48,7 +48,7 @@ class NotificationSourceRepository: ObservableObject {
             if (err != nil) {
                 debugPrint("[NNN] Failed to push subscription \(err)")
             } else {
-            debugPrint("[NNN] Update Succeeded")
+                debugPrint("[NNN] Subscribed to \(source.display_name) successfully")
             }
         }
     }
@@ -61,7 +61,7 @@ class NotificationSourceRepository: ObservableObject {
             if (err != nil) {
                 debugPrint("[NNN] Failed to remove subscription \(err)")
             } else {
-            debugPrint("[NNN] Update Succeeded")
+                debugPrint("[NNN] Unsubscribed from \(source.display_name) successfully")
             }
         }
     }

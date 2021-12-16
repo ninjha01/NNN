@@ -1,11 +1,14 @@
 * Nishant Notification eNabler (NNN)
 ** Quickstart
+   Build ios
    #+begin_src shell
      pod install
      xcodebuild -workspace NNN.xcworkspace -scheme "NNN (iOS)" build
      echo "Grab app path from above and run"
      echo "ios-deploy --debug --bundle <PATH>"
    #+end_src
+
+   deploy cloud functions
 ** Data Model
    #+begin_src json
      {

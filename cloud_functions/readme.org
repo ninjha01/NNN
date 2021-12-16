@@ -1,0 +1,16 @@
+* NNS messaging cloud functions
+** To Deploy
+#+begin_src bash
+  firebase deploy --only functions
+#+end_src
+** To test locally
+#+begin_src bash
+
+  yarn build --watch # in other shell
+  export GOOGLE_APPLICATION_CREDENTIALS="<path_to_creds>"
+  firebase functions:shell
+  # send post messages by running
+  # sendToTopic.post('').json({title: "hello", body_text: "hello", topic: "melon-general"})
+#+end_src
+** To enable new service account to call
+   https://cloud.google.com/functions/docs/securing/authenticating
