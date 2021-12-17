@@ -74,7 +74,6 @@ struct NotificationSourceListView: View {
                     })
                 }
             }
-            .navigationTitle("Notification Sources")
             .overlay {
                 if (model.fetching) {
                     ProgressView("Fetching notifcation sources...")
@@ -85,7 +84,7 @@ struct NotificationSourceListView: View {
                     model.fetchData()
                     
                 }
-        }
+        }.navigationBarTitle("Notification Sources")
     }
 }
 

@@ -37,3 +37,9 @@ struct EntryPointView: View {
     }
 }
 
+struct App_Previews: PreviewProvider {
+    static var previews: some View {
+        EntryPointView()
+.previewInterfaceOrientation(.portrait)
+    }
+}
