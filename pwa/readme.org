@@ -1,0 +1,24 @@
+* NNS: PWA Client
+** Dev instructions:
+   Install
+   #+begin_src sh
+     npm install
+   #+end_src
+
+   To run
+   #+begin_src sh
+     npm run start
+   #+end_src
+
+   To deploy
+   #+begin_src sh
+     ./deploy.sh
+   #+end_src
+
+   To run storybook
+   #+begin_src sh
+     npm run storybook
+   #+end_src
+   
+** TODO To install as PWA
+   1. Allow 3rd party cookies site exception through chrome settings 

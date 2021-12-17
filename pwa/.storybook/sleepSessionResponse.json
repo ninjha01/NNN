@@ -1,0 +1,113 @@
+{
+  "session": [
+    {
+      "id": "2418886153",
+      "name": "Sleep from 2021-11-09T06:18:00.000-05:00",
+      "description": "",
+      "startTimeMillis": "1636432080000",
+      "endTimeMillis": "1636456680000",
+      "modifiedTimeMillis": "1636458025113",
+      "application": {
+        "packageName": "com.withings.wiscale2"
+      },
+      "activityType": 72
+    },
+    {
+      "id": "2421237588",
+      "name": "Sleep from 2021-11-10T07:54:00.000-05:00",
+      "description": "",
+      "startTimeMillis": "1636518480000",
+      "endTimeMillis": "1636548840000",
+      "modifiedTimeMillis": "1636568511593",
+      "application": {
+        "packageName": "com.withings.wiscale2"
+      },
+      "activityType": 72
+    },
+    {
+      "id": "2424366864",
+      "name": "Sleep from 2021-11-12T06:17:00.000-05:00",
+      "description": "",
+      "startTimeMillis": "1636690620000",
+      "endTimeMillis": "1636715820000",
+      "modifiedTimeMillis": "1636735369183",
+      "application": {
+        "packageName": "com.withings.wiscale2"
+      },
+      "activityType": 72
+    },
+    {
+      "id": "2427776409",
+      "name": "Sleep from 2021-11-14T06:35:00.000-05:00",
+      "description": "",
+      "startTimeMillis": "1636854480000",
+      "endTimeMillis": "1636889700000",
+      "modifiedTimeMillis": "1637291789813",
+      "application": {
+        "packageName": "com.withings.wiscale2"
+      },
+      "activityType": 72
+    },
+    {
+      "id": "2429546451",
+      "name": "Sleep from 2021-11-15T06:31:00.000-05:00",
+      "description": "",
+      "startTimeMillis": "1636944300000",
+      "endTimeMillis": "1636975860000",
+      "modifiedTimeMillis": "1637291789813",
+      "application": {
+        "packageName": "com.withings.wiscale2"
+      },
+      "activityType": 72
+    },
+    {
+      "id": "2431379617",
+      "name": "Sleep from 2021-11-16T07:26:00.000-05:00",
+      "description": "",
+      "startTimeMillis": "1637037900000",
+      "endTimeMillis": "1637065560000",
+      "modifiedTimeMillis": "1637291789813",
+      "application": {
+        "packageName": "com.withings.wiscale2"
+      },
+      "activityType": 72
+    },
+    {
+      "id": "2433051127",
+      "name": "Sleep from 2021-11-17T07:11:00.000-05:00",
+      "description": "",
+      "startTimeMillis": "1637124840000",
+      "endTimeMillis": "1637151060000",
+      "modifiedTimeMillis": "1637332078187",
+      "application": {
+        "packageName": "com.withings.wiscale2"
+      },
+      "activityType": 72
+    },
+    {
+      "id": "2434725005",
+      "name": "Sleep from 2021-11-18T08:40:00.000-05:00",
+      "description": "",
+      "startTimeMillis": "1637207880000",
+      "endTimeMillis": "1637242800000",
+      "modifiedTimeMillis": "1637332078187",
+      "application": {
+        "packageName": "com.withings.wiscale2"
+      },
+      "activityType": 72
+    },
+    {
+      "id": "2436436483",
+      "name": "Sleep from 2021-11-19T07:27:00.000-05:00",
+      "description": "",
+      "startTimeMillis": "1637297280000",
+      "endTimeMillis": "1637324820000",
+      "modifiedTimeMillis": "1637332078187",
+      "application": {
+        "packageName": "com.withings.wiscale2"
+      },
+      "activityType": 72
+    }
+  ],
+  "deletedSession": []
+}

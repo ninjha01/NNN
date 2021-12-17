@@ -1,0 +1,42 @@
+.navbar {
+  background-color: rgba(40, 87, 128);
+  height: 60px;
+  vertical-align: middle;
+  display: flex;
+}
+
+.navbar h4 {
+  display: inline-block;
+  text-align: center;
+  padding: 3px;
+  color: white;
+  text-decoration: none;
+  margin: auto;
+}
+
+.navbar a {
+  display: inline-block;
+  text-align: center;
+  padding: 3px;
+  color: #fff;
+  text-decoration: none;
+  margin: auto;
+}
+
+.navbar p {
+  display: inline-block;
+  text-align: center;
+  padding: 3px;
+  color: #d3d3d3;
+  text-decoration: none;
+  font-size: 10px;
+  margin: auto;
+}
+
+.navbar img {
+  display: block;
+  max-width: 60px;
+  max-height: 60px;
+  width: auto;
+  height: auto;
+}

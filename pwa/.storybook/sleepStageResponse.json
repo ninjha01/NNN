@@ -1,0 +1,339 @@
+{
+   "bucket": [
+    {
+      "startTimeMillis": "1636518480000",
+      "endTimeMillis": "1636548840000",
+      "dataset": [
+        {
+          "dataSourceId": "derived:com.google.sleep.segment:com.google.android.gms:merged",
+          "point": [
+            {
+              "startTimeNanos": "1636518480000000000",
+              "endTimeNanos": "1636518600000000000",
+              "dataTypeName": "com.google.sleep.segment",
+              "originDataSourceId": "raw:com.google.sleep.segment:com.withings.wiscale2:sleep-activity segments",
+              "value": [
+                {
+                  "intVal": 1,
+                  "mapVal": []
+                }
+              ]
+            },
+            {
+              "startTimeNanos": "1636518600000000000",
+              "endTimeNanos": "1636518780000000000",
+              "dataTypeName": "com.google.sleep.segment",
+              "originDataSourceId": "raw:com.google.sleep.segment:com.withings.wiscale2:sleep-activity segments",
+              "value": [
+                {
+                  "intVal": 4,
+                  "mapVal": []
+                }
+              ]
+            },
+            {
+              "startTimeNanos": "1636518780000000000",
+              "endTimeNanos": "1636519260000000000",
+              "dataTypeName": "com.google.sleep.segment",
+              "originDataSourceId": "raw:com.google.sleep.segment:com.withings.wiscale2:sleep-activity segments",
+              "value": [
+                {
+                  "intVal": 5,
+                  "mapVal": []
+                }
+              ]
+            },
+            {
+              "startTimeNanos": "1636519260000000000",
+              "endTimeNanos": "1636520700000000000",
+              "dataTypeName": "com.google.sleep.segment",
+              "originDataSourceId": "raw:com.google.sleep.segment:com.withings.wiscale2:sleep-activity segments",
+              "value": [
+                {
+                  "intVal": 1,
+                  "mapVal": []
+                }
+              ]
+            },
+            {
+              "startTimeNanos": "1636520700000000000",
+              "endTimeNanos": "1636521660000000000",
+              "dataTypeName": "com.google.sleep.segment",
+              "originDataSourceId": "raw:com.google.sleep.segment:com.withings.wiscale2:sleep-activity segments",
+              "value": [
+                {
+                  "intVal": 5,
+                  "mapVal": []
+                }
+              ]
+            },
+            {
+              "startTimeNanos": "1636521660000000000",
+              "endTimeNanos": "1636523400000000000",
+              "dataTypeName": "com.google.sleep.segment",
+              "originDataSourceId": "raw:com.google.sleep.segment:com.withings.wiscale2:sleep-activity segments",
+              "value": [
+                {
+                  "intVal": 4,
+                  "mapVal": []
+                }
+              ]
+            },
+            {
+              "startTimeNanos": "1636523400000000000",
+              "endTimeNanos": "1636524120000000000",
+              "dataTypeName": "com.google.sleep.segment",
+              "originDataSourceId": "raw:com.google.sleep.segment:com.withings.wiscale2:sleep-activity segments",
+              "value": [
+                {
+                  "intVal": 5,
+                  "mapVal": []
+                }
+              ]
+            },
+            {
+              "startTimeNanos": "1636524120000000000",
+              "endTimeNanos": "1636524900000000000",
+              "dataTypeName": "com.google.sleep.segment",
+              "originDataSourceId": "raw:com.google.sleep.segment:com.withings.wiscale2:sleep-activity segments",
+              "value": [
+                {
+                  "intVal": 4,
+                  "mapVal": []
+                }
+              ]
+            },
+            {
+              "startTimeNanos": "1636524900000000000",
+              "endTimeNanos": "1636526880000000000",
+              "dataTypeName": "com.google.sleep.segment",
+              "originDataSourceId": "raw:com.google.sleep.segment:com.withings.wiscale2:sleep-activity segments",
+              "value": [
+                {
+                  "intVal": 5,
+                  "mapVal": []
+                }
+              ]
+            },
+            {
+              "startTimeNanos": "1636526880000000000",
+              "endTimeNanos": "1636527780000000000",
+              "dataTypeName": "com.google.sleep.segment",
+              "originDataSourceId": "raw:com.google.sleep.segment:com.withings.wiscale2:sleep-activity segments",
+              "value": [
+                {
+                  "intVal": 4,
+                  "mapVal": []
+                }
+              ]
+            },
+            {
+              "startTimeNanos": "1636527780000000000",
+              "endTimeNanos": "1636528140000000000",
+              "dataTypeName": "com.google.sleep.segment",
+              "originDataSourceId": "raw:com.google.sleep.segment:com.withings.wiscale2:sleep-activity segments",
+              "value": [
+                {
+                  "intVal": 5,
+                  "mapVal": []
+                }
+              ]
+            },
+            {
+              "startTimeNanos": "1636528140000000000",
+              "endTimeNanos": "1636529760000000000",
+              "dataTypeName": "com.google.sleep.segment",
+              "originDataSourceId": "raw:com.google.sleep.segment:com.withings.wiscale2:sleep-activity segments",
+              "value": [
+                {
+                  "intVal": 4,
+                  "mapVal": []
+                }
+              ]
+            },
+            {
+              "startTimeNanos": "1636529760000000000",
+              "endTimeNanos": "1636531740000000000",
+              "dataTypeName": "com.google.sleep.segment",
+              "originDataSourceId": "raw:com.google.sleep.segment:com.withings.wiscale2:sleep-activity segments",
+              "value": [
+                {
+                  "intVal": 5,
+                  "mapVal": []
+                }
+              ]
+            },
+            {
+              "startTimeNanos": "1636531740000000000",
+              "endTimeNanos": "1636532700000000000",
+              "dataTypeName": "com.google.sleep.segment",
+              "originDataSourceId": "raw:com.google.sleep.segment:com.withings.wiscale2:sleep-activity segments",
+              "value": [
+                {
+                  "intVal": 4,
+                  "mapVal": []
+                }
+              ]
+            },
+            {
+              "startTimeNanos": "1636532700000000000",
+              "endTimeNanos": "1636535700000000000",
+              "dataTypeName": "com.google.sleep.segment",
+              "originDataSourceId": "raw:com.google.sleep.segment:com.withings.wiscale2:sleep-activity segments",
+              "value": [
+                {
+                  "intVal": 5,
+                  "mapVal": []
+                }
+              ]
+            },
+            {
+              "startTimeNanos": "1636535700000000000",
+              "endTimeNanos": "1636537980000000000",
+              "dataTypeName": "com.google.sleep.segment",
+              "originDataSourceId": "raw:com.google.sleep.segment:com.withings.wiscale2:sleep-activity segments",
+              "value": [
+                {
+                  "intVal": 4,
+                  "mapVal": []
+                }
+              ]
+            },
+            {
+              "startTimeNanos": "1636537980000000000",
+              "endTimeNanos": "1636538700000000000",
+              "dataTypeName": "com.google.sleep.segment",
+              "originDataSourceId": "raw:com.google.sleep.segment:com.withings.wiscale2:sleep-activity segments",
+              "value": [
+                {
+                  "intVal": 5,
+                  "mapVal": []
+                }
+              ]
+            },
+            {
+              "startTimeNanos": "1636538700000000000",
+              "endTimeNanos": "1636540140000000000",
+              "dataTypeName": "com.google.sleep.segment",
+              "originDataSourceId": "raw:com.google.sleep.segment:com.withings.wiscale2:sleep-activity segments",
+              "value": [
+                {
+                  "intVal": 4,
+                  "mapVal": []
+                }
+              ]
+            },
+            {
+              "startTimeNanos": "1636540140000000000",
+              "endTimeNanos": "1636540560000000000",
+              "dataTypeName": "com.google.sleep.segment",
+              "originDataSourceId": "raw:com.google.sleep.segment:com.withings.wiscale2:sleep-activity segments",
+              "value": [
+                {
+                  "intVal": 5,
+                  "mapVal": []
+                }
+              ]
+            },
+            {
+              "startTimeNanos": "1636540560000000000",
+              "endTimeNanos": "1636541880000000000",
+              "dataTypeName": "com.google.sleep.segment",
+              "originDataSourceId": "raw:com.google.sleep.segment:com.withings.wiscale2:sleep-activity segments",
+              "value": [
+                {
+                  "intVal": 4,
+                  "mapVal": []
+                }
+              ]
+            },
+            {
+              "startTimeNanos": "1636541880000000000",
+              "endTimeNanos": "1636542120000000000",
+              "dataTypeName": "com.google.sleep.segment",
+              "originDataSourceId": "raw:com.google.sleep.segment:com.withings.wiscale2:sleep-activity segments",
+              "value": [
+                {
+                  "intVal": 5,
+                  "mapVal": []
+                }
+              ]
+            },
+            {
+              "startTimeNanos": "1636542120000000000",
+              "endTimeNanos": "1636544460000000000",
+              "dataTypeName": "com.google.sleep.segment",
+              "originDataSourceId": "raw:com.google.sleep.segment:com.withings.wiscale2:sleep-activity segments",
+              "value": [
+                {
+                  "intVal": 4,
+                  "mapVal": []
+                }
+              ]
+            },
+            {
+              "startTimeNanos": "1636544460000000000",
+              "endTimeNanos": "1636546200000000000",
+              "dataTypeName": "com.google.sleep.segment",
+              "originDataSourceId": "raw:com.google.sleep.segment:com.withings.wiscale2:sleep-activity segments",
+              "value": [
+                {
+                  "intVal": 5,
+                  "mapVal": []
+                }
+              ]
+            },
+            {
+              "startTimeNanos": "1636546200000000000",
+              "endTimeNanos": "1636546920000000000",
+              "dataTypeName": "com.google.sleep.segment",
+              "originDataSourceId": "raw:com.google.sleep.segment:com.withings.wiscale2:sleep-activity segments",
+              "value": [
+                {
+                  "intVal": 4,
+                  "mapVal": []
+                }
+              ]
+            },
+            {
+              "startTimeNanos": "1636546920000000000",
+              "endTimeNanos": "1636547640000000000",
+              "dataTypeName": "com.google.sleep.segment",
+              "originDataSourceId": "raw:com.google.sleep.segment:com.withings.wiscale2:sleep-activity segments",
+              "value": [
+                {
+                  "intVal": 5,
+                  "mapVal": []
+                }
+              ]
+            },
+            {
+              "startTimeNanos": "1636547640000000000",
+              "endTimeNanos": "1636548360000000000",
+              "dataTypeName": "com.google.sleep.segment",
+              "originDataSourceId": "raw:com.google.sleep.segment:com.withings.wiscale2:sleep-activity segments",
+              "value": [
+                {
+                  "intVal": 4,
+                  "mapVal": []
+                }
+              ]
+            },
+            {
+              "startTimeNanos": "1636548360000000000",
+              "endTimeNanos": "1636548840000000000",
+              "dataTypeName": "com.google.sleep.segment",
+              "originDataSourceId": "raw:com.google.sleep.segment:com.withings.wiscale2:sleep-activity segments",
+              "value": [
+                {
+                  "intVal": 1,
+                  "mapVal": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+[
+  {
+    "startTimeMillis": "1636655738800",
+    "endTimeMillis": "1636742138800",
+    "dataset": [
+      {
+        "dataSourceId": "derived:com.google.sleep.segment:com.google.android.gms:merged",
+        "point": []
+      }
+    ]
+  },
+  {
+    "startTimeMillis": "1636742138800",
+    "endTimeMillis": "1636828538800",
+    "dataset": [
+      {
+        "dataSourceId": "derived:com.google.sleep.segment:com.google.android.gms:merged",
+        "point": []
+      }
+    ]
+  },
+  {
+    "startTimeMillis": "1636828538800",
+    "endTimeMillis": "1636914938800",
+    "dataset": [
+      {
+        "dataSourceId": "derived:com.google.sleep.segment:com.google.android.gms:merged",
+        "point": []
+      }
+    ]
+  }
+]
