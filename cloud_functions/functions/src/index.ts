@@ -68,25 +68,25 @@ export const subscribeTokenToTopics = functions.https.onCall(
   }
 );
 
-// export const unsubscribeTokenToTopics = functions.https.onCall(
-//   async (data: any, context: any) => {
-//     const token = data.token;
-//     const topics = data.topics;
+export const unsubscribeTokenToTopics = functions.https.onCall(
+  async (data: any, context: any) => {
+    const token = data.token;
+    const topics = data.topics;
 
-//     if (!(token && topics)) {
-//       return {
-//         message:
-//           "Need valid strings for token and topic." +
-//           `Got: ${data.token} ${data.topic}`,
-//       };
-//     }
-//     try {
-//       topics.map(async (topic: string) => {
-//         await admin.messaging().unsubscribeToTopic([token], topic);
-//       });
-//     } catch (err) {
-//       return { message: err };
-//     }
-//     return { message: "Success" };
-//   }
-// );
+    if (!(token && topics)) {
+      return {
+        message:
+          "Need valid strings for token and topic." +
+          `Got: ${data.token} ${data.topic}`,
+      };
+    }
+    try {
+      topics.map(async (topic: string) => {
+        await admin.messaging().unsubscribeToTopic([token], topic);
+      });
+    } catch (err) {
+      return { message: err };
+    }
+    return { message: "Success" };
+  }
+);

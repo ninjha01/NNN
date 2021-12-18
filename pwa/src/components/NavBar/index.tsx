@@ -50,22 +50,6 @@ export const NavBar = (props: {
           >
             Home
           </Link>
-          <Link
-            id="todo"
-            style={{ fontSize: "1.25rem" }}
-            className="nav-link"
-            to="/todo"
-          >
-            Todo
-          </Link>
-          <Link
-            id="dashboard"
-            style={{ fontSize: "1.25rem" }}
-            className="nav-link"
-            to="/dashboard"
-          >
-            Dashboard
-          </Link>
           <Button
             onClick={() => {
               localStorage.clear();

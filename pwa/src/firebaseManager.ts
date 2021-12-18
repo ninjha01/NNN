@@ -9,7 +9,12 @@ import {
   getFirestore,
   updateDoc,
 } from "firebase/firestore";
-import { getMessaging, getToken } from "firebase/messaging";
+import {
+  getMessaging,
+  getToken,
+  NotificationPayload,
+  onMessage,
+} from "firebase/messaging";
 import { getFunctions, httpsCallable } from "firebase/functions";
 
 import {
@@ -44,11 +49,34 @@ const retrieveToken = async (): Promise<string> => {
   });
   return token;
 };
+const displayNotification = (title: string, body: string) => {
+  if (Notification.permission == "granted") {
+    navigator.serviceWorker.getRegistration().then(function (reg: any) {
+      const options = {
+        body: body,
+        icon: "/logo512.png",
+      };
+      console.log("trying to show", title, options);
+      reg.showNotification(title, options);
+    });
+  } else {
+    alert(title);
+  }
+};
+
+onMessage(messaging, (payload: any) => {
+  console.log("Message received. ", payload);
+  const notification = payload.notification;
+  const title = notification.title;
+  const body = notification.body;
+  displayNotification(title, body);
+});
 
 export const initializeMessaging = async (
   currentUserId: string
 ): Promise<NotificationSource[]> => {
   const token = await retrieveToken();
+  console.log("token", token);
   const sources = await getNotificationSources();
   const subscribedNotificationSources = sources.filter((source) =>
     source.subscribers.includes(currentUserId)
