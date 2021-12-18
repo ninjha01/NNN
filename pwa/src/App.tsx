@@ -25,7 +25,7 @@ const App = (props: AppProps) => {
           <Route
             exact
             path="/"
-            component={() => <HomePage token={currentUserId} />}
+            component={() => <HomePage currentUserId={currentUserId} />}
           />
         </Suspense>
       </HashRouter>

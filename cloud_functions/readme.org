@@ -11,6 +11,7 @@
   firebase functions:shell
   # send post messages by running
   # sendToTopic.post('').json({title: "hello", body_text: "hello", topic: "melon-general"})
+  # subscribeTokenToTopics.post('').json({token: "", topics: [""]})
 #+end_src
 ** To enable new service account to call
    https://cloud.google.com/functions/docs/securing/authenticating
