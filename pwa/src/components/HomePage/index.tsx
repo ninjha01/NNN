@@ -23,7 +23,7 @@ const HomePage = (props: HomePageProps) => {
 
   useEffect(() => {
     async function retrieveNotificationSources() {
-      const s = await initializeMessaging(props.currentUserId);
+      const s = await initializeMessaging(props.currentUserId, queueMsg);
       setSources(s);
     }
     retrieveNotificationSources();

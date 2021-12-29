@@ -73,11 +73,13 @@ onMessage(messaging, (payload: any) => {
 });
 
 export const initializeMessaging = async (
-  currentUserId: string
+  currentUserId: string,
+  queueMsg: (msg: string) => void
 ): Promise<NotificationSource[]> => {
   const token = await retrieveToken();
   console.log("token", token);
-  const sources = await getNotificationSources();
+  console.log("currentUserId", currentUserId);
+  const sources = await getNotificationSources(currentUserId);
   const subscribedNotificationSources = sources.filter((source) =>
     source.subscribers.includes(currentUserId)
   );
@@ -88,9 +90,9 @@ export const initializeMessaging = async (
     token: token,
     topics: subscribedTopics,
   });
-  console.log(
-    `Successfully subscribed to ${subscribedTopics}: ${subResult.data.message}`
-  );
+  const subMsg = `Successfully subscribed to ${subscribedTopics}: ${subResult.data.message}`;
+  console.log(subMsg);
+  queueMsg(subMsg);
   const unsubscribedNotificationSources = sources.filter(
     (source) => !source.subscribers.includes(currentUserId)
   );
@@ -101,9 +103,9 @@ export const initializeMessaging = async (
     token: token,
     topics: unsubscribedTopics,
   });
-  console.log(
-    `Successfully unsubscribed to ${unsubscribedTopics}: ${data.message}`
-  );
+  const unsubMsg = `Successfully unsubscribed to ${unsubscribedTopics}: ${data.message}`;
+  console.log(unsubMsg);
+  queueMsg(unsubMsg);
   return sources;
 };
 
@@ -157,16 +159,20 @@ export interface NotificationSource {
   subscribers: string[];
 }
 
-const getNotificationSources = async (): Promise<NotificationSource[]> => {
+const getNotificationSources = async (
+  currentUserId: string
+): Promise<NotificationSource[]> => {
   const sources: NotificationSource[] = [];
   const querySnapshot = await getDocs(collection(db, "topics"));
   querySnapshot.forEach(async (doc) => {
     const data: any = await doc.data();
-    sources.push({
-      id: doc.id,
-      display_name: data.display_name,
-      subscribers: data.subscribers,
-    });
+    if (data.allowed_user_ids.includes(currentUserId)) {
+      sources.push({
+        id: doc.id,
+        display_name: data.display_name,
+        subscribers: data.subscribers,
+      });
+    }
   });
   return sources;
 };
