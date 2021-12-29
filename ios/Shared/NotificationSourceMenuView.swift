@@ -61,7 +61,13 @@ struct NotificationSourceListView: View {
     
     var body: some View {
         NavigationView{
+            
+            VStack{
+                Label (
+                    "These are the topics you have access to.\nIf you wish to add/remove a topic, contact Nishant.", systemImage: "bell.badge"            )
             List {
+
+                
                 ForEach(model.notificationSources) { source in
                     SourceToggler(display_name: source.display_name,
                                   toggledOn: source.amISubscribed(),
@@ -84,6 +90,7 @@ struct NotificationSourceListView: View {
                     model.fetchData()
                     
                 }
+            }
         }.navigationBarTitle("Notification Sources")
     }
 }

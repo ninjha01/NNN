@@ -29,13 +29,19 @@ class NotificationSource: Equatable, Identifiable {
     var id: String
     var display_name:  String
     var subscribers: [String]
+    var allowed_user_ids: [String]
     
-    init(id: String, display_name: String, subscribers: [String]) {
+    init(id: String, display_name: String, subscribers: [String], allowed_user_ids: [String]) {
         self.id = id
         self.display_name = display_name
         self.subscribers = subscribers
+        self.allowed_user_ids = allowed_user_ids
     }
     func amISubscribed() -> Bool {
         return self.subscribers.contains(getCurrentUserID() ?? "unknown")
+    }
+    func isAllowed() -> Bool {
+        return self.allowed_user_ids.contains(getCurrentUserID() ?? "unknown")
+    
     }
 }

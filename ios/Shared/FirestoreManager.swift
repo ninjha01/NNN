@@ -27,12 +27,16 @@ class NotificationSourceRepository: ObservableObject {
                 debugPrint("[NNN]", "Success! : \(snapshot!.documents)")
                 for document in snapshot!.documents {
                     let data = document.data()
-                    sourceList.append(
-                        NotificationSource(
-                            id: document.documentID,
-                            display_name: data["display_name"] as! String,
-                            subscribers: data["subscribers"] as! [String])
+                    let source  = NotificationSource(
+                        id: document.documentID,
+                        display_name: data["display_name"] as! String,
+                        subscribers: data["subscribers"] as! [String],
+                        allowed_user_ids: data["allowed_user_ids"] as! [String]
+                        
                     )
+                    if source.isAllowed() {
+                        sourceList.append(source)
+                    }
                 }
                 saveFunc(sourceList)
             }
